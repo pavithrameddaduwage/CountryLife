@@ -82,10 +82,10 @@
             Typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         </p>
          
-        <div class="scroll-down">
+        <div id="scroll-down" class="scroll-down">
             <span class="scroll-text">Scroll Down</span>
             <img src="./images/arrow.png" alt="Scroll Down Arrow" class="scroll-arrow">
-        </div>
+        </div>        
     </div>
    
 </section>
@@ -126,7 +126,7 @@
             ipsum
             porro veritatis? Iusto, molestiae.</p>
     </div>
-
+<div id="gallery-section" class="mt-5">
     <div class="mt-5">
         <div class="row g-0">
             <div class="col-md-4 position-relative">
@@ -185,6 +185,7 @@
             </div>
         </div>
     </div>
+</div>
 
     <div class="text-center mt-5">
         <a href="Services.html" class="custom-links">
@@ -408,7 +409,33 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+z0xF4dO4vBU2+F4U9NghcGbc1/5kG7Q2D6eZ3d" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
-
+    <script>
+        const scrollDown = document.getElementById("scroll-down");
+        const targetSection = document.getElementById("who-we-are");
+        scrollDown.addEventListener("click", function () {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+        });
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link'); 
+            function fadeOutOnNavigate(e) {
+                e.preventDefault();  
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = e.target.href;
+                }, 2000);  
+            }
+            navLinks.forEach(link => {
+                link.addEventListener('click', fadeOutOnNavigate);
+            });
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    document.body.classList.add('fade-in');
+                }, 3000); 
+            });
+        });
+    </script>     
 </body>
 
 </html>

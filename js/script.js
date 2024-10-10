@@ -40,20 +40,3 @@ $(document).ready(function () {
     });
 });
 
-
-
- 
-document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('.nav-link'); 
-
-    function fadeOutOnNavigate(e) {
-        e.preventDefault();  
-        document.body.classList.add('fade-out');
-        setTimeout(() => {
-            window.location.href = e.target.href;
-        }, 500);  
-    }
-    navLinks.forEach(link => {
-        link.addEventListener('click', fadeOutOnNavigate);
-    });
-});
