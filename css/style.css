@@ -8,6 +8,7 @@ html, body {
     background-position: center; /* Centers the image horizontally and vertically */
     font-family: 'Times New Roman', sans-serif;
     line-height: 1.5;
+    
 }
 
 p{
@@ -147,12 +148,13 @@ p{
 /* Main hero section styling */
 .hero-section {
     position: relative;
-    height: 120vh;   
+    height: 90vh;   
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     overflow: hidden;
+   margin-bottom: 10px;
 }
 
 .hero-container {
@@ -222,7 +224,7 @@ p{
  
 .corner-image {
     position: absolute;
-    top: 46%;   
+    top: 60%;   
     right: 17%;  
     transform: translateY(-50%);  
     width: 210px;
@@ -917,4 +919,59 @@ p {
         padding: 0 15px;
     }
 }
-   
+ 
+@keyframes flyIn {
+    0% {
+        transform: translateY(100%);  
+        opacity: 0;  
+    }
+    100% {
+        transform: translateY(0);  
+        opacity: 1;  
+    }
+}
+
+.hero-image {
+    animation: flyIn 0.5s ease forwards;  
+}
+
+.hero-image.animate {
+    animation: flyIn 0.5s ease forwards;  
+}
+
+.hero-section {
+    transition: opacity 0.5s ease;
+}
+
+
+.staircase-layout .image-container {
+    opacity: 0; 
+    animation: flyIn 1.5s ease forwards;
+    animation-fill-mode: forwards; 
+}
+
+.staircase-layout .image-container.show {
+    opacity: 1; 
+    animation: flyIn 1.5s ease forwards; 
+}
+@keyframes flyInText {
+    0% {
+        transform: translateY(50px);  
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0);  
+        opacity: 1;  
+    }
+}
+
+.text-fly-in {
+    opacity: 0; 
+    animation: flyInText 1s ease forwards;  
+    animation-fill-mode: forwards;  
+}
+ 
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
