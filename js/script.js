@@ -22,7 +22,7 @@ document.querySelector('.home-nav').addEventListener('click', function() {
  $(document).ready(function () {
     function animateImages() {
         $(".staircase-layout .image-container").each(function (index) {
-            $(this).delay(index * 300).queue(function (next) { 
+            $(this).delay(index * 500).queue(function (next) { 
                 $(this).addClass("show"); 
                 next();
             });
