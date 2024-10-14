@@ -8,38 +8,44 @@ html, body {
     background-position: center; /* Centers the image horizontally and vertically */
     font-family: 'Times New Roman', sans-serif;
     line-height: 1.5;
-    
+   
 }
-
+ 
 p{
+   font-family: 'Montserrat';
    font-size: 16px;
    color: #D8D8D8;
-   line-height: 1.5; 
+   line-height: 1.5;
 }
-
+/* * {
+    transition: all 5s ease;  
+ 
+} */
+ 
 .navbar-light .navbar-nav .nav-link {
-    color: #D8D8D8 !important;
+    color: #D8D8D8 !important; /* Override other styles */
     font-size: 16px;
     text-transform: uppercase;
 }
-
+ 
 .navbar, .navbar-brand {
     padding-top: 0;
     padding-bottom: 0;
+    font-family: 'Montserrat';
 }
-
+ 
 .navbar .nav-link {
     text-decoration: none; /* Removes default underline */
     color: #aaa; /* Adjust the color to match your design */
     position: relative; /* Allows positioning of the underline */
     padding-bottom: 5px; /* Adds some spacing below the text */
 }
-
+ 
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 0; 
+    padding-right: 0;
     padding-left: 0;
 }
-
+ 
 .navbar .nav-link.active::after {
     content: ''; /* Creates the underline */
     position: absolute;
@@ -51,6 +57,20 @@ p{
     transition: width 0.3s ease; /* Smooth transition for the underline */
 }
 
+/* Centering nav links in the navbar */
+.navbar-nav {
+    flex-grow: 1; /* Allow nav links to grow and occupy available space */
+    justify-content: center; /* Center the nav links */
+}
+
+/* Ensure the hamburger icon is white */
+.navbar-toggler-icon {
+    background-color: #fff; /* Set the background color of the icon to white */
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+}
+
+ 
 .logo-text {
     font-size: 16px; /* Adjust the size of the text as needed */
     color: #D8D8D8; /* Adjust the color of the text */
@@ -58,7 +78,7 @@ p{
     align-items: center; /* Vertically centers the text */
     text-transform: uppercase;
 }
-
+ 
 .custom-btn{
     border-color: #EBAB22;
     color: #EBAB22;
@@ -66,7 +86,7 @@ p{
     font-size: 16px;
     border-radius: 13px;
 }
-
+ 
 .custom-btn:hover{
     border-color: #EBAB22;
     color: #fff;
@@ -74,63 +94,63 @@ p{
     font-size: 16px;
     border-radius: 13px;
     background-color: #EBAB22;
-
+ 
 }
-
+ 
 .sub-headings{
     font-size: 35px;
     text-transform: uppercase;
     color: #EBAB22;
 }
-
+ 
 .our-works-sec-text {
     background: linear-gradient(to top, rgba(0, 0, 0, 2), rgba(0, 0, 0, 0));
         padding: 40px; /* Padding between the text and the image border */
     width: 100%; /* Full width of the image */
     font-family: "Montserrat", sans-serif;
 }
-
+ 
 .our-work-image-text-heading{
     font-size: 29px;
     font-weight: bold;
 }
-
+ 
 .custom-links{
     text-decoration: none;
     text-transform: uppercase;
-    
+   
 }
-
+ 
 .custom-link-text{
     color: #EBAB22 !important;
     line-height: 0.2;
 }
-
+ 
 .icons{
     color: #EBAB22 !important;
 }
-
+ 
 .home-card{
     border-color: #EBAB22;
     background-color: transparent ;
     border-radius: 50px;
 }
-
+ 
 .card-header-text{
-
+ 
     font-size: 16px;
     color: #D8D8D8;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
     height: 100%;
 }
-
+ 
 .icon-sec-text{
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
     color: #D8D8D8;
 }
-
+ 
 #has-background-img{
     background-image: url('../images/AAA%202.svg');
     background-repeat: no-repeat;
@@ -143,33 +163,56 @@ p{
         padding: 3rem;
     }
 }
-
-
+ 
+ 
 /* Main hero section styling */
 .hero-section {
     position: relative;
-    height: 90vh;   
+    height: 90vh;  
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     text-align: center;
     overflow: hidden;
-   margin-bottom: 10px;
+    margin-bottom: 10px;
 }
-
+ 
+.hero-image {
+    position: relative;
+    z-index: 2;
+}
+ 
+.hero-image img {
+    max-width: 100%; /* Ensures the image scales down on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+    z-index: 3;
+}
+ 
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 59vh; /* Adjust height for mobile */
+    }
+    .hero-image img {
+        width: 80%; /* Adjust width for mobile */
+    }
+}
+ 
+ 
 .hero-container {
     position: relative;
     width: 100%;
     max-width: 1200px;
 }
-
+ 
 .hero-text {
     position: relative;
     /* z-index: 10; */
     color: #ADADAD;
     text-transform: uppercase;
 }
-
+ 
  
 .where-text {
     font-size: 4rem;
@@ -177,8 +220,8 @@ p{
     z-index: 3;
     margin-bottom: 1rem;
 }
-
-
+ 
+ 
 .concepts-text {
     font-size: 4rem;  
     color: #ADADAD;
@@ -188,25 +231,25 @@ p{
     left: 50%;
     transform: translateX(-50%);
 }
-
+ 
  
 .on-image-text {
     font-size: 4rem;
     color: #ADADAD;
-    z-index: 10;   
+    z-index: 10;  
     position: absolute;
-    top: 104%;   
+    top: 104%;  
     left: 50%;
     transform: translateX(-50%);
 }
-
+ 
  
 .hero-image {
     position: relative;
     z-index: 2;
-    
+   
 }
-
+ 
  
 .hero-image img {
     position: relative;
@@ -218,13 +261,13 @@ p{
     border-radius: 15px;
     /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
     z-index: 3;
-    
+   
 }
-
+ 
  
 .corner-image {
     position: absolute;
-    top: 60%;   
+    top: 60%;  
     right: 17%;  
     transform: translateY(-50%);  
     width: 210px;
@@ -236,23 +279,24 @@ p{
     justify-content: center;
     z-index: 7;
 }
-
+ 
 .corner-image img {
-    width: 50%;
+    width: 80%;
     height: auto;
+    margin-top: 90px;
 }
-
-
+ 
+ 
  
 @media (max-width: 768px) {
     .where-text, .concepts-text, .on-image-text {
         font-size: 2.5rem;
     }
-
+ 
     .hero-image img {
         width: 300px;
     }
-
+ 
     .corner-image {
         width: 50px;
         height: 50px;
@@ -260,9 +304,9 @@ p{
         left: 85%;
     }
 }
-
+ 
 .hero-description {
-    position: absolute; 
+    position: absolute;
     left: 20px;  
     bottom: 40px;  
     font-size: 1rem;  
@@ -270,7 +314,7 @@ p{
     max-width: 250px;  
     text-align: left;
 }
-
+ 
 .scroll-down {
     position: absolute;  
     right: 20px;  
@@ -279,7 +323,7 @@ p{
     flex-direction: column;  
     align-items: center;  
 }
-
+ 
 .scroll-text {
     writing-mode: vertical-rl;  
     transform: rotate(180deg);  
@@ -288,37 +332,37 @@ p{
     color: #D8D8D8;  
     text-transform: uppercase;
 }
-
+ 
 .scroll-arrow {
     width: 30px;  
     cursor: pointer;  
 }
-
-
+ 
+ 
 .clients-section {
     padding: 60px 0;
     text-align: center;
 }
-
+ 
 .clients-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
+ 
 .section-title {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 40px;
     letter-spacing: 2px;
 }
-
+ 
 .clients-cards {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
-
+ 
 .client-card {
     background-color: transparent;
     border: 3px solid #ffffff;  
@@ -329,13 +373,13 @@ p{
     flex-direction: column;
     align-items: flex-start;
 }
-
+ 
 .client-info {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
-
+ 
 .client-image {
     width: 80px;
     height: 80px;
@@ -343,49 +387,49 @@ p{
     object-fit: cover;
     margin-right: 15px;
 }
-
+ 
 .client-details {
     text-align: left;
 }
-
+ 
 .client-name {
     font-size: 1.2rem;
     color: #ffffff;
 }
-
+ 
 .client-designation {
     font-size: 1rem;
     color: #ffffff;
 }
-
+ 
 .client-description {
     font-size: 1rem;
     color: #ffffff;
     margin: 15px 0;
     text-align: left;
 }
-
+ 
 .client-rating {
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
 }
-
+ 
 .stars {
     color: #FFC107;  
     font-size: 1.5rem;
 }
-
+ 
 .rating {
     font-size: 1.2rem;
     color: #fff;
 }
-
+ 
 .dots {
     margin-top: 40px;
 }
-
+ 
 .dot {
     height: 15px;
     width: 15px;
@@ -395,12 +439,12 @@ p{
     margin: 0 5px;
     background-color: transparent;  
 }
-
+ 
 .dot.active {
     background-color: #515151;  
     border: 2px solid #515151;  
 }
-
+ 
 .bottom-description {
     margin-top: 40px;
     font-size: 1.2rem;
@@ -411,85 +455,86 @@ p{
     .clients-cards {
         flex-direction: column;
     }
-
+ 
     .client-card {
         width: 100%;
         margin-bottom: 20px;
     }
 }
-
+ 
 .footer {
     background-color: #1B1B1B;
     color: #D8D8D8;
     padding: 40px 0;
+    font-family: "Montserrat";
 }
-
+ 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; 
+    align-items: flex-start;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
+ 
 .footer-section {
     flex: 1;  
     margin: 0 20px;
     display: flex;  
     flex-direction: column;  
-    justify-content: space-between; 
+    justify-content: space-between;
 }
-
+ 
 .logo-and-text {
     display: flex;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
-
+ 
 .footer-title {
     font-size: 1.5rem;  
     color: #fff;
     margin-left: 15px;  
 }
-
+ 
 .list-unstyled{
     line-height: 3;
 }
 .footer-logo {
-    width: 80px; 
+    width: 80px;
     height: 80px;  
     background-color: #fff;  
     border-radius: 50%;  
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     padding: 10px;  
 }
-
+ 
 .footer-logo img {
     width: 90%;  
     height: auto;
 }
-
+ 
  
 .footer p {
     font-size: 0.9rem;
     margin-bottom: 20px;
     line-height: 1.8;
 }
-
+ 
  
 .footer-section ul {
-     line-height: 1.5; 
+     line-height: 1.5;
     padding: 10;
 }
-
+ 
 .footer-section ul li {
     margin-bottom: 10px;
-    line-height: 1.5; 
+    line-height: 1.5;
 }
-
+ 
 .footer-section ul li a {
     color: #D8D8D8;
     text-decoration: none;
@@ -497,28 +542,28 @@ p{
     transition: color 0.3s;
     line-height: 1.5;
 }
-
+ 
 .footer-section ul li a:hover {
     color: #fff;  
     text-decoration:none;
 }
-
+ 
  
 .social-icons {
     display: flex;
     gap: 10px;
 }
-
+ 
 .social-icons a {
     color: #D8D8D8;
     font-size: 1.2rem;
     transition: color 0.3s;
 }
-
+ 
 .social-icons a:hover {
     color: #fff;  
 }
-
+ 
  
 .footer-bottom {
     text-align: center;
@@ -526,22 +571,22 @@ p{
     padding-top: 20px;
     /* border-top: 1px solid #333;   */
 }
-
+ 
 .footer-bottom p {
     font-size: 0.9rem;
-    color: #888;   
+    color: #888;  
 }
 a{
     text-decoration: none;
 }
-
+ 
 .services-section {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 50px;
 }
-
+ 
 .service-card {
     /* background-color: #1e1e1e; */
     border-radius: 15px;
@@ -550,31 +595,31 @@ a{
     width: 20%;
     transition: transform 0.3s ease;
 }
-
+ 
 .service-card:hover {
     transform: scale(1.05);
 }
-
+ 
 .card-image {
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 15px;
 }
-
+ 
 .card-image img {
     width: 100%;
     height: auto;
     border-radius: 12px;
 }
-
  
-
+ 
+ 
 p {
     font-size: 0.9em;
     margin-bottom: 20px;
     color: #cccccc;
 }
-
+ 
 .read-more {
     color: #ffc107;  
     text-decoration: none;
@@ -583,7 +628,7 @@ p {
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.3s ease;
 }
-
+ 
 .read-more:hover {
     border-bottom: 2px solid #ffc107;
 }
@@ -593,11 +638,11 @@ p {
 .gallery-section .img-fluid {
     transition: transform 0.3s ease;
 }
-
+ 
 .gallery-section .img-fluid:hover {
     transform: scale(1.05);
 }
-
+ 
 .clients-section .dot {
     height: 12px;
     width: 12px;
@@ -605,23 +650,23 @@ p {
     display: inline-block;
     transition: background-color 0.3s ease;
 }
-
+ 
 .clients-section .dot.bg-warning {
     background-color: #ffc107;
 }
-
+ 
 .clients-section .dot.bg-secondary {
     background-color: #666;
 }
-
+ 
 .clients-section .dot:hover {
     background-color: #ffc107;
 }
-
+ 
 .card-title {
-    color: #ffc107; 
+    color: #ffc107;
 }
-
+ 
 .card-footer .text-warning {
     font-size: 1.2em;
 }
@@ -632,7 +677,7 @@ p {
     padding: 0 !important;
     margin: 0 !important;
 }
-
+ 
  
 .gallery-section img {
     display: block;
@@ -646,63 +691,63 @@ p {
     padding: 30px 0;
     color: #fff;
 }
-
+ 
 .testimonial-card {
  
     padding: 20px;
-
+ 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
+ 
 .testimonial-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
-
+ 
 .client-info {
     display: flex;
     align-items: center;
 }
-
+ 
 .client-image {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 15px;
 }
-
+ 
 .client-details h3 {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
 }
-
+ 
 .client-details p {
     margin: 0;
     font-size: 14px;
     color: #ccc;
 }
-
+ 
 .client-rating {
     display: flex;
     justify-content: flex-end;  
     align-items: center;
 }
-
+ 
 .stars {
     font-size: 20px;
     color: #ffd700;
     margin-right: 10px;
 }
-
+ 
 .rating-number {
     font-size: 18px;
     font-weight: bold;
     color: #fff;
 }
-
+ 
 .testimonial-description {
     font-size: 14px;
     color: #ccc;
@@ -713,58 +758,59 @@ p {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
-
+ 
 .fade-in {
     opacity: 1;
 }
 #who-we-are {
     display: none;  
 }
-
+ 
 #who-we-are.visible {
     display: block;
     opacity: 0;
     animation: fadeIn 1s forwards;  
 }
-
+ 
 @keyframes fadeIn {
     to {
         opacity: 1;
     }
 } */
 .staircase-layout {
-    display: flex;  
-    flex-direction: row;  
+    display: flex;
+    justify-content: center;  
+    flex-wrap: wrap;  
+   
 }
-
-.image-container {
-    position: relative;
-    padding: 0;
-    margin-left: 0;
-    margin-top: 0;
+ 
+.image-container img {
+    max-width: 100%;  
+    height: auto;
+    display: block;
 }
-
+ 
 .image-container img {
     display: block;
     max-width: 100%;
     height: auto;
 }
-
+ 
  
 .image-container:nth-child(1) {
     margin-top: 0;
 }
-
+ 
 .image-container:nth-child(2) {
     margin-top: 30px;    
 }
-
+ 
 .image-container:nth-child(3) {
     margin-top: 60px;    
 }
 @media (max-width: 768px) {
     .where-text, .concepts-text, .on-image-text {
-        font-size: 1.5rem; /* Responsive font-size for mobile */
+        font-size: 1.5rem;  
     }
 }
 .our-works-sec-text:hover {
@@ -783,17 +829,17 @@ p {
     .staircase-layout {
       display: block;
     }
-  
+ 
 }
 @media screen and (max-width: 768px) {
     .services-section {
       display: block;
     }
-  
+ 
     .service-card {
       margin-bottom: 20px;
     }
-  
+ 
     .service-card .card-image img {
       width: 100%;
       height: auto;
@@ -807,11 +853,11 @@ p {
         font-size: 0.8rem;  
         padding: 2rem;
     }
-
+ 
     .where-text, .concepts-text, .on-image-text {
         font-size: 2rem;  
     }
-
+ 
     .hero-image {
         display: flex;  
         justify-content: center;  
@@ -819,106 +865,110 @@ p {
         padding: 20px;  
         height: 100%;  
     }
-    
+   
     .hero-image img {
         width: 280px;  
-        height: auto; 
+        height: auto;
         margin-left: 66px;
+        margin-right: -77px;
     }
-    
-    
+   
+   
     .corner-image {
         width: 30px;  
-        height: 30px; 
+        height: 30px;
         top: 60%;  
         left: 80%;  
     }
-    
-
+   
+ 
     .clients-cards {
         flex-direction: column;  
     }
-
+ 
     .client-card {
-        width: 100%; 
+        width: 100%;
         margin-bottom: 15px;
     }
-
-    .staircase-layout {
-        display: block;  
-    }
-
     .services-section {
         display: block;  
     }
-
+ 
     .service-card {
-        margin-bottom: 15px; 
+        margin-bottom: 15px;
     }
-
+ 
     .hero-description, .scroll-down {
         display: none;  
     }
-
+ 
     .social-icons a {
         font-size: 1rem;  
     }
-
+ 
     .footer-container {
-        flex-direction: column; 
+        flex-direction: column;
         text-align: center;  
     }
-
+ 
     .footer-section {
         margin: 20px 0;  
     }
-
+ 
     .footer-logo {
         width: 60px;
         height: 60px;
     }
-
+ 
     .testimonial-card {
         padding: 15px;  
     }
-
+ 
     .service-card .card-image img {
         width: 100%;  
         height: auto;
     }
 }
-
+ 
 @media (max-width: 576px) {
     .our-works-sec-text {
         font-size: 0.7rem;  
         padding: 1.5rem;
     }
-
+ 
     .where-text, .concepts-text, .on-image-text {
         font-size: 1.5rem;  
     }
-
+ 
+    .paragraph, p {  
+        line-height: 1.5;
+        text-align: justify;
+        padding: 10px;
+        font-size: small;
+    }
+ 
     .footer-logo {
         width: 50px;
         height: 50px;
     }
-
+ 
     .client-card {
         padding: 10px;  
     }
-
+ 
     .testimonial-card {
         padding: 10px;  
     }
-
+ 
     .hero-description, .scroll-down {
         font-size: 0.8rem;  
     }
-
+ 
     .footer-container {
         padding: 0 15px;
     }
 }
+ 
  
 @keyframes flyIn {
     0% {
@@ -930,46 +980,47 @@ p {
         opacity: 1;  
     }
 }
-
+ 
 .hero-image {
-    animation: flyIn 0.5s ease forwards;  
+    animation: flyIn 3s ease forwards;  
 }
-
+ 
 .hero-image.animate {
-    animation: flyIn 0.5s ease forwards;  
+    animation: flyIn 3.5s ease forwards;  
 }
-
+ 
 .hero-section {
-    transition: opacity 0.5s ease;
+    transition: opacity 2.4s ease;  /
 }
-
-
+ 
 .staircase-layout .image-container {
-    opacity: 0; 
-    animation: flyIn 1.5s ease forwards;
-    animation-fill-mode: forwards; 
+    opacity: 0;
+    animation: flyIn 3s ease forwards;  
+    animation-fill-mode: forwards;
 }
-
+ 
 .staircase-layout .image-container.show {
-    opacity: 1; 
-    animation: flyIn 1.5s ease forwards; 
+    opacity: 1;
+    animation: flyIn 4s ease forwards;  
 }
+ 
 @keyframes flyInText {
     0% {
-        transform: translateY(50px);  
-        opacity: 0; 
+        transform: translateY(20px);  
+        opacity: 0;
     }
     100% {
         transform: translateY(0);  
         opacity: 1;  
     }
 }
-
+ 
 .text-fly-in {
-    transition: opacity 1s ease, transform 1s ease;
-    animation: flyInText 1s ease forwards;  
+    transition: opacity 3s ease, transform 3s ease;  
+    animation: flyInText 3s ease forwards;  
     animation-fill-mode: forwards;  
 }
+ 
  
 #scroll-down {
     cursor: pointer;
@@ -977,9 +1028,33 @@ p {
  
 body.fade-out {
     opacity: 0;
-    transition: opacity 2s ease-in-out;  
+    transition: opacity 4s ease-in-out;  
 }
-
+ 
 body.fade-in {
     opacity: 1;
 }
+ 
+.custom-btn:hover {
+    transition: all 1s ease;  
+}
+ 
+.our-works-sec-text:hover {
+    transform: scale(1.05);
+    transition: all 1.2s ease;  
+}
+ 
+.navbar .nav-link.active::after {
+    transition: width 1s ease;  
+}
+ 
+@media (max-width: 768px) {
+    .corner-image {
+        bottom: 10%;  
+        left: 50%;    
+        transform: translateX(-50%);
+        width: 100px;
+        height: 40px;  
+    }
+}
+ 
