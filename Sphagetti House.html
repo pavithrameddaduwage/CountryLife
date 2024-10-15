@@ -27,39 +27,49 @@
 
 </head>
 
-<body>
+<body style="background-image: none;">
 
-    <!-- navbar start -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="./images/logo.svg" class="img-fluid" alt="Logo" />
-                <span class="logo-text ms-4">Country life</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="background-color: #fff;"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link me-md-5" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-md-5" href="AboutUs.html">about us</a>
-                    </li>
-                    <li class="nav-item">
-                     <a class="nav-link active me-md-5" aria-current="page" href="Services.html">Services</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <button class="btn btn-outline-success custom-btn" type="submit">Contact Us</button>
-                </form>
+<!-- navbar start -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <!-- Logo for large screens -->
+            <img src="./images/logo.svg" class="img-fluid d-none d-lg-block" alt="Country Life Logo" />
+            <!-- Logo for small screens -->
+            <div class="footer-logo d-lg-none" style="margin-top: 5px;">  
+                <img src="./images/logo.svg" alt="Country Life Logo">
             </div>
+            
+            <span class="logo-text ms-2 d-lg-none" style="margin-top: 22px;">Country Life</span>  
+            <span class="logo-text ms-4 d-none d-lg-block">Country Life</span>  
+        </a>
+         
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-center justify-content-lg-start" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto ms-auto">
+                <li class="nav-item mx-auto">
+                    <a class="nav-link me-md-5" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mx-auto">
+                    <a class="nav-link   me-md-5" aria-current="page"  href="AboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item mx-auto">
+                    <a class="nav-link active me-md-5" aria-current="page" href="Services.html">Services</a>
+                </li>
+            </ul>
+            <form class="d-flex ">
+                <button class="btn btn-outline-success custom-btn mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false">Contact Us</button>
+            </form>
         </div>
-    </nav>
-    <!-- navbar end -->
+    </div>
+</nav>
+<!-- navbar end -->
+<!-- navbar end -->
 
 
   <!-- Header Section -->
