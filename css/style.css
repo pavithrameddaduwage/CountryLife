@@ -882,7 +882,7 @@ p {
     .hero-image img {
         width: 280px;  
         height: auto;
-        margin-left: 66px;
+        margin-left: 20px;
         margin-right: -77px;
     }
    
@@ -1151,5 +1151,13 @@ body.fade-in {
     
     .service-card p {
         font-size: 1rem; 
+    }
+}
+@media (max-width: 320px) {
+    .hero-image img {
+        width: 280px;
+        height: auto;
+        margin-left: 70px;
+        margin-right: -77px;
     }
 }
