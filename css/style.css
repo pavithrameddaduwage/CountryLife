@@ -65,7 +65,6 @@ p{
 /* Ensure the hamburger icon is white */
 .navbar-toggler-icon {
     background-image: url('../images/nav.png');
- 
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
@@ -212,6 +211,7 @@ p{
     position: relative;
     width: 100%;
     max-width: 1200px;
+    padding-top: 67px;
 }
  
 .hero-text {
