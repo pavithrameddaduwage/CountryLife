@@ -39,4 +39,24 @@ $(document).ready(function () {
         animateText();
     });
 });
+$document.addEventListener("DOMContentLoaded", function () {
+        var toggler = document.querySelector(".navbar-toggler");
+        var openIcon = document.querySelector(".navbar-toggler-icon-open");
+        var closeIcon = document.querySelector(".navbar-toggler-icon-close");
+        
+        toggler.addEventListener("click", function () {
+            var isExpanded = toggler.getAttribute("aria-expanded") === "true";
+            
+            // Toggle visibility of the icons
+            if (isExpanded) {
+                openIcon.classList.remove("d-none");
+                closeIcon.classList.add("d-none");
+            } else {
+                openIcon.classList.add("d-none");
+                closeIcon.classList.remove("d-none");
+            }
+        });
+    });
+
+   
 

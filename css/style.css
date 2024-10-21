@@ -960,6 +960,10 @@ p {
         font-size: small;
         
     }
+    .custom-link-text {
+
+        text-align: center;
+    }
     .align-items-center{
         align-items:flex-start !important;
 
@@ -1161,3 +1165,4 @@ body.fade-in {
         margin-right: -77px;
     }
 }
+ 
